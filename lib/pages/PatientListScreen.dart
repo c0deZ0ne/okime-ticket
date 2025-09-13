@@ -2,27 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ticket_app/db/database_helper.dart';
 import 'package:ticket_app/pages/add_patient.dart';
 import 'package:ticket_app/types/patient.dart';
-import 'package:sqflite_common_ffi/sqflite_ffi.dart';
-
-void main() {
-  // Initialize FFI
-  sqfliteFfiInit();
-  databaseFactory = databaseFactoryFfi;
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Medical Health App",
-      theme: ThemeData(primarySwatch: Colors.indigo),
-      home: const PatientListScreen(),
-    );
-  }
-}
 
 class PatientListScreen extends StatefulWidget {
   const PatientListScreen({super.key});
@@ -36,7 +15,6 @@ class _PatientStateListScreen extends State<PatientListScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _loadPatients();
   }
@@ -82,7 +60,7 @@ class _PatientStateListScreen extends State<PatientListScreen> {
                   },
                 ),
                 IconButton(
-                  icon: const Icon(Icons.edit),
+                  icon: const Icon(Icons.delete),
                   onPressed: () async {
                     await _deletePatients(p.id!);
                     _loadPatients();

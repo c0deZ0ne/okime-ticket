@@ -2,129 +2,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-// class MaterialTicketPage extends StatelessWidget {
-//   const MaterialTicketPage({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     double result = 0;
-//     final TextEditingController currencyInputController =
-//         TextEditingController();
-//     return Scaffold(
-//       appBar: AppBar(
-//         backgroundColor: Colors.blueGrey,
-//         elevation: 0,
-
-//         title: Text(
-//           "Currency Converter",
-//           style: TextStyle(color: Colors.white),
-//         ),
-//         centerTitle: true,
-//       ),
-//       backgroundColor: Colors.blueGrey,
-
-//       body: Padding(
-//         padding: const EdgeInsets.all(18.0),
-
-//         // color: Colors.amber,
-//         child: Center(
-//           child: Column(
-//             spacing: 15.6,
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: [
-//               Text(
-//                 result.toString(),
-//                 style: TextStyle(
-//                   fontSize: 44,
-//                   color: Colors.white,
-//                   fontWeight: FontWeight.bold,
-//                 ),
-//               ),
-//               TextField(
-//                 controller: currencyInputController,
-//                 // keyboardType: TextInputType.number,
-//                 style: TextStyle(color: Colors.black, height: 0),
-//                 decoration: InputDecoration(
-//                   hintText: "Enter currency in USD",
-//                   hintStyle: TextStyle(color: Colors.black),
-//                   border: OutlineInputBorder(
-//                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-//                     // borderSide: BorderSide(color: Colors.white54, width: 1.0),
-//                   ),
-//                   fillColor: Colors.white,
-//                   filled: true,
-//                   prefixIcon: Icon(
-//                     Icons.monetization_on_outlined,
-//                     color: Colors.black,
-//                   ),
-
-//                   focusedBorder: OutlineInputBorder(
-//                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-//                     borderSide: BorderSide(color: Colors.black87, width: 1),
-//                   ),
-//                 ),
-//               ),
-
-//               // ElevatedButton(
-//               //   style: (ButtonStyle(
-//               //     shape: WidgetStatePropertyAll(
-//               //       RoundedRectangleBorder(
-//               //         borderRadius: BorderRadius.circular(10),
-//               //       ),
-//               //     ),
-//               //     elevation: const WidgetStatePropertyAll(16),
-//               //     backgroundColor: const WidgetStatePropertyAll(Colors.black),
-//               //     foregroundColor: const WidgetStatePropertyAll(Colors.white),
-//               //     minimumSize: const WidgetStatePropertyAll(
-//               //       Size(double.infinity, 45),
-//               //     ),
-//               //   )),
-//               //   onPressed: () {
-//               //     debugPrint(">>>>>>>>.Click btn>>>>>>>>>>>>>>");
-//               //   },
-
-//               //   child: const Text("Convert", style: TextStyle(fontSize: 20)),
-//               // ),
-//               ElevatedButton(
-//                 style: ElevatedButton.styleFrom(
-//                   backgroundColor: Colors.black,
-//                   elevation: 15,
-//                   foregroundColor: Colors.white,
-//                   minimumSize: const Size(double.infinity, 45),
-//                   shape: RoundedRectangleBorder(
-//                     borderRadius: BorderRadiusGeometry.circular(10),
-//                   ),
-//                 ),
-
-//                 // style: (ButtonStyle(
-
-//                 //   shape: WidgetStatePropertyAll(
-
-//                 //     RoundedRectangleBorder(
-//                 //       borderRadius: BorderRadius.circular(10),
-//                 //     ),
-//                 //   ),
-//                 //   elevation: const WidgetStatePropertyAll(16),
-//                 //   backgroundColor: const WidgetStatePropertyAll(Colors.black),
-//                 //   foregroundColor: const WidgetStatePropertyAll(Colors.white),
-//                 //   minimumSize: const WidgetStatePropertyAll(
-//                 //     Size(double.infinity, 45),
-//                 //   ),
-//                 // )),
-//                 onPressed: () {
-//                   double.parse(currencyInputController.text) * 8;
-//                 },
-
-//                 child: const Text("Convert", style: TextStyle(fontSize: 20)),
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 class MaterialTicketPage extends StatefulWidget {
   MaterialTicketPage({super.key}) {
     debugPrint("constructor");
@@ -263,7 +140,7 @@ class _MaterialTicketState extends State<MaterialTicketPage> {
     // this is a good place to clean up resources
     // dispose the controller to avoid memory leaks
     //unsubscribe from streams, etc.
-    
+
     currencyInputController.dispose();
     super.dispose();
   }
